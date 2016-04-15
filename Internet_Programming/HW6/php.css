@@ -1,0 +1,23 @@
+
+/*this is the selector to set the map in the tianx253plot.php*/
+#map{
+	height: 90%;
+	width: 79%;
+	margin-left: 10%;
+	/*margin-right: 10%;*/
+	/*margin-top: 3%;*/
+	/*align:"middle";*/
+}
+
+
+/*html selector*/
+/*use class selector to make time italic*/
+.italic{
+	font-style: italic;
+	text-align: center;
+}
+
+.header{
+	text-align: center;
+	color: blue;
+}

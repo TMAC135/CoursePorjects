@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- My calender -->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ran Tian's Calender</title>
+		<link rel="stylesheet" type="text/css" href="AdRotator.css" />
+		<script src="AdRotator.js"></script>
+	</head>
+	<body>
+		<!-- head tille -->
+		<div>
+			<h1>My Calendar</h1>
+		</div>
+		<div class="ToolBar">
+			<nav>
+				<a href="MyCalendar.html">Calendar</a>
+				<a href="CalendarInput.html">Input</a>
+			</nav>
+		</div>
+		<!-- contend of the calendar -->
+		<div id="table">
+			<table>
+				<!-- header for the calender -->
+				<thead>
+					<tr>
+						<th class="CalendarDay"><span class="dayHeader">WeekDay</span></th>
+						<th colspan="2" class="CalendarContend"><span class="dayHeader">Course Details</span></th>
+					</tr>
+				</thead>
+				<!-- Monday -->
+				<tr>
+					<td class="CalendarDay"><span class="dayHeader">Monday</span></td>
+					<!-- CSCI 4131 -->
+					<td class="CalendarContend"><span class="italic">11:15-12:30pm</span><br/>
+						<a href="https://ay15.moodle.umn.edu/course/view.php?id=13093" target="_blank">CSCI 4131</a><br/>
+						Amunson Hall 350<br>
+						<button id="button1" onclick="renderImage(event,0)" ondblclick="deleteMydiv()">picture</button>
+						<!--<div style="width: 500px;height: 500px;background-color: red;position: absolute;"></div>-->
+					</td>
+				</tr>
+				<!-- Tuesday -->
+				<tr>
+					<td class="CalendarDay"><span class="dayHeader">Tuesday</span></td>
+					<!-- EE 8581 -->
+					<td class="CalendarContend"><span class="italic">11:15-12:30pm</span><br/>
+						<a href="https://ay15.moodle.umn.edu/course/view.php?id=13093" target="_blank">EE 8581</a><br/>
+						Keller Hall 3125	 <br>
+						<button id="button2" onclick="renderImage(event,1)" ondblclick="deleteMydiv()">picture</button>
+						<!--<div style="width: 500px;height: 500px;background-color: red;position: absolute;"></div>-->
+					</td>
+					<!-- CSCI 5561 -->
+					<td class="CalendarContend"><span class="italic">1:00-2:15pm</span><br/>
+						<a href="https://ay15.moodle.umn.edu/course/view.php?id=13093" target="_blank">CSCI 5561</a><br/>
+						Mechanical Engineering 212	<br>
+						<button id="button3" onclick="renderImage(event,2)" ondblclick="deleteMydiv()">picture</button>
+						<!--<div style="width: 500px;height: 500px;background-color: red;position: absolute;"></div>-->
+					</td>
+				</tr>
+				<!-- Wednesday -->
+				<tr>
+					<td class="CalendarDay"><span class="dayHeader">Wednesday</span></td>
+					<!-- CSCI 4131 -->
+					<td class="CalendarContend"><span class="italic">11:15-12:30pm</span><br/>
+						CSCI 4131<br/>
+						Amunson Hall 350<br>
+						<button id="button4" onclick="renderImage(event,0)" ondblclick="deleteMydiv()">picture</button>
+						<!--<div style="width: 500px;height: 500px;background-color: red;position: absolute;"></div>-->
+					</td>
+					<!-- EE 5393 -->
+					<td class="CalendarContend"><span class="italic">2:30-3:45pm</span><br/>
+						EE 5393<br/>
+						Keller Hall 3230<br>
+						<button id="button5" onclick="renderImage(event,1)" ondblclick="deleteMydiv()">picture</button>
+						<!--<div style="width: 500px;height: 500px;background-color: red;position: absolute;"></div>-->
+					</td>
+				</tr>
+				<!-- Thursday -->
+				<tr>
+					<td class="CalendarDay"><span class="dayHeader">Thursday</span></td>
+					<!-- EE 8581 -->
+					<td class="CalendarContend"><span class="italic">11:15-12:30pm</span><br/>
+						EE 8581<br/>
+						Keller Hall 3125	<br>
+						<button id="button6" onclick="renderImage(event,1)" ondblclick="deleteMydiv()">picture</button>
+						<!--<div style="width: 500px;height: 500px;background-color: red;position: absolute;"></div>-->
+					</td>
+					<!-- CSCI 5561 -->
+					<td class="CalendarContend"><span class="italic">1:00-2:15pm</span><br/>
+						CSCI 5561<br/>
+						Mechanical Engineering 212<br>	
+						<button id="button7" onclick="renderImage(event,2)" ondblclick="deleteMydiv()">picture</button>
+						<!--<div style="width: 500px;height: 500px;background-color: red;position: absolute;"></div>-->
+					</td>
+				</tr>
+				<!-- Friday -->
+				<tr>
+					<td class="CalendarDay"><span class="dayHeader">Friday</span></td>
+					<!-- EE 5393 -->
+					<td class="CalendarContend"><span class="italic">2:30-3:45pm</span><br/>
+						EE 5393<br/>
+						Keller Hall 3230<br>
+						<button id="button8" onclick="renderImage(event,1)" ondblclick="deleteMydiv()">picture</button>
+						<!--<div style="width: 500px;height: 500px;background-color: red;position: absolute;"></div>-->
+					</td>
+				</tr>
+			</table>
+		</div>
+				
+		<!-- Test browser -->
+		<p class="italic">*This pasge is tested in Google Chrome</p>
+		<p>Pictures are taken from following links:<br>
+		https://campusmaps.umn.edu/anderson-hall<br>
+		https://arduino.mn/about/<br>
+		https://campusmaps.umn.edu/mechanical-engineering<br>
+		</p>
+		
+		<!--test code for the dynamic div element-->
+		<!--<div style="position: absolute;left: 100px;top: 100px;width:500px;height:500px;background-color: black;
+		align-content: center;">
+		<img src="image1.jpg" style="width: 300px;height: 300px;margin-top: 100px;" />
+		</div>-->
+	</body>
+</html>
