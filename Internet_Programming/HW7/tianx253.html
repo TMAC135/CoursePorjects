@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		#floating-panel{
+			position: relative;
+			left: 7px;;
+			width: 150px;
+			height: 230px;
+			background-color: ghostwhite;
+		}
+		#map{
+		position: absolute;
+      	width: 80%;
+        height: 80%;
+        /*margin-left: 30%;*/
+		}	
+		</style>
+	</head>
+	<body>
+		<div id="map">			
+		</div>
+		<div id="floating-panel">
+			<!--contends of the float panel-->
+			<form id="myForm" action = "tianx253.php">
+			<!--radio-->
+			<input type="radio"  />Arts<br>
+			<input type="radio" />Food<br>
+			<input type="radio" />Doctor<br>
+			<input type="radio" />Clothing Store<br>
+			<input type="radio" />Shop Mall<br>
+			<input type="radio" />Travel<br>
+			<input type="radio" />University<br>
+			<!--label-->
+			<label>Radius(M):</label><br>
+			<!--slider-->
+			<input type="range" name="slider" id="slider" min="0" max="3000" step="100" value="" 
+				onchange="updateText(this.value);"/><br>
+			<input type="text" value="1500" id="showText"/><br>
+	
+			<!--hidden input for the latitude and longitude-->
+			<input type="hidden" id="lati" value="" />
+			<input type="hidden" id="long" value="" />
+			<!--submit button-->
+			<input type="submit" id="submit" /><br>
+			</form>
+		</div>
+		<!--javascript code-->
+		<script>
+//show the value when we slide the slider
+			function updateText(val){
+				document.getElementById("showText").value=val;
+			}
+		
+//map part
+			var map;
+			var querymarker;
+			var infowindow;
+			function initMap(){
+				//the initial position is around the University of Minnesota
+				map = new google.maps.Map(document.getElementById('map'), {
+			    zoom: 15,
+			    center: {lat: 44.977276, lng: -93.232266}
+			  });
+			    // This event listener calls addMarker() when the map is clicked.
+				  google.maps.event.addListener(map, 'click', function(event) {
+				    addMarker(event.latLng, map);
+				    
+				    //assign the lat and lng to the lati and long for the input type,we keep override these values
+				    document.getElementById("lati").value = event.latLng.lat();
+				    document.getElementById("long").value = event.latLng.lng();
+				    
+				  });
+			}
+			// Adds a marker to the map.
+			function addMarker(location, map) {
+			  // Add the marker at the clicked location, and add the next-available label
+			  // from the array of alphabetical characters.
+			  querymarker = new google.maps.Marker({
+			    position: location,
+//			    label: labels[labelIndex++ % labels.length],
+			    map: map
+			  });
+			  
+//			  alert(typeof location);
+//			  alert(location);
+			  console.log(location.lng());
+			}
+
+		</script>
+		
+		<!--outer google map api-->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVZDR85EzFhJGc74hP1VAvwolIcOEtce4&signed_in=true&callback=initMap"
+        async defer></script>
+	</body>
+</html>
