@@ -55,9 +55,9 @@
 								<input type='hidden' name='action' value='show_change'>
 								<input type='hidden' name='edit_id' value=".$edit_id.">
 								<td>".$row['acc_id']."</td>
-								<td><input type='text' name='edit_name'></td>
-								<td><input type='text' name='edit_login'></td>
-								<td><input type='text' name='edit_password'></td>
+								<td><input type='text' name='edit_name' required></td>
+								<td><input type='text' name='edit_login' required></td>
+								<td><input type='text' name='edit_password' required></td>
 								<td>
 								<input type='submit' value='Update'>
 								<a href='admin.php?action=list_user'><button>Cancel</button></a>

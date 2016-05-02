@@ -36,6 +36,9 @@ if (!isset($db))
 $s = '23';
 echo "hello '$s' ";
 
+$t = true;
+echo $t;
+
 $query = "SELECT * FROM log_table";
 $users = $db->query($query);
 // var_dump($users);
