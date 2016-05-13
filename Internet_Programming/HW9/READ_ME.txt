@@ -16,4 +16,9 @@ Notice that in this assignment:
 1: I only consider validation for login, if login we create is  existing in our database, I regard it as failure operation.Otherwise, it is valid operation.
 
 2: Validation for login is case sensitive, or simply speaking, ‘aa’ is not the same as ‘Aa’.
-		
+
+3: To login:
+you can use three account:
+Jim Smith     Smitty    JS123
+Jane Jones    JJones    JS456
+Ran Tian      tianx253  tianx253		
